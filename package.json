@@ -1,0 +1,57 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "basic structure for a react app on parcel",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "check": "tsc --noEmit --skipLibCheck",
+    "test": "jest",
+    "lint": "npm run lint:css & npm run lint:js",
+    "lint:css": "stylelint './src/**/*.{js,css}'",
+    "lint:js": "eslint './src/**/*.js'",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itswyll/react-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "boilerplate",
+    "linting"
+  ],
+  "author": "wyll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itswyll/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/itswyll/react-boilerplate#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "parcel": "^2.4.0",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "2.6.1",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{css}": "stylelint --fix",
+    "*": "prettier --ignore-unknown --write"
+  }
+}
